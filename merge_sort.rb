@@ -16,7 +16,7 @@ def merge_sort(array)
     elsif second_half[pointer2].nil?
       sorted_array[i] = first_half[pointer1]
       pointer1 += 1
-    elsif first_half[pointer1] < second_half[pointer2]
+    elsif first_half[pointer1] <= second_half[pointer2]
       sorted_array[i] = first_half[pointer1]
       pointer1 += 1
     else
