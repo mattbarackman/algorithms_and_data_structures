@@ -1,10 +1,14 @@
+# this is a method that takes an unsorted array and returns the ith element of 
+# the sorted version of that array. the algorithm's structure is similar to quicksort,
+# except it only does one recursive call per intermediate layer. it is nondeterministic.
+# it runs in O(n) time on average and 0(n^2) in the worst case.
 
 def random_selection(array, index)
   pivot_point = (0...array.length).to_a.sample
   array, pivot_index = partition(array, pivot_point)
-  if array[index] == array[pivot_index]
+  if index == pivot_index
     array[pivot_index]
-  elsif array[index] < array[pivot_index]
+  elsif index < pivot_index
     random_selection(array[0...pivot_index], index)
   else
     random_selection(array[pivot_index...array.length], index - pivot_index)  
