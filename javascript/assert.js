@@ -1,7 +1,7 @@
-function assert(condition, message) {
+function assert(condition, successMessage, failMessage) {
     if (!condition) {
-        throw message || "Assertion failed";
+        throw failMessage || "Assertion failed";
     } else {
-      console.log("test passed");
+      console.log(successMessage || "test passed");
     }
 }

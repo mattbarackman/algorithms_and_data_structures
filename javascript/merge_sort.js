@@ -38,4 +38,4 @@ function merge (array1, array2) {
 }
 
 
-assert(mergeSort([1,3,5,7,4,6,9,8,2,10]).compare([1,2,3,4,5,6,7,8,9,10]));
+assert(mergeSort([1,3,5,7,4,6,9,8,2,10]).compare([1,2,3,4,5,6,7,8,9,10]), "mergeSort passed");
